@@ -1,0 +1,8 @@
+
+A two-pass assembler is a program that converts assembly language code into machine code in two distinct phases: Pass 1 and Pass 2.
+
+During Pass 1, the assembler performs a preliminary scan of the entire assembly code, processing each line to generate a symbol table. The symbol table keeps track of the addresses and attributes of labels and variables used in the program. Additionally, Pass 1 calculates the size of the program and identifies any errors related to undefined symbols or incorrect syntax. The output of Pass 1 is an intermediate file containing the symbol table and other relevant information.
+
+In Pass 2, the assembler utilizes the intermediate file generated in Pass 1 to produce the final machine code. It goes through the assembly code again, translating each instruction into its equivalent machine code. The assembler also resolves addresses and substitutes the appropriate values for symbols using the information from the symbol table. Pass 2 produces the final executable code, and if there are no errors, the assembler completes the conversion process.
+
+The two-pass approach allows the assembler to gather necessary information in the first pass before generating the final machine code in the second pass, improving efficiency and facilitating error detection and correction.
